@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/txt_gray"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/color_gray"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="5dp">
+
+
+        <com.pollvote.utils.customView.CustomTVRobbotBold
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/driving_licence"
+            android:textColor="@color/black" />
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:id="@+id/lay_doc"
+
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_button_gray"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_done_wh"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <com.pollvote.utils.customView.CustomTVRobbotRegular
+            android:id="@+id/btn_doc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="2dp"
+            android:layout_toEndOf="@+id/iv_done"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:textColor="@color/color_black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</LinearLayout>

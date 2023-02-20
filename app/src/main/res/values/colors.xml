@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03DAC5</color>
+    <color name="colorPrimaryDark">#03DAC5</color>
+    <color name="colorAccent">#0AB6A6</color>
+
+    <color name="app_base_color">#3CC4AF</color>
+    <color name="color_black">#000</color>
+    <color name="color_white">#FFF</color>
+    <color name="color_white_trans">#81FFFFFF</color>
+    <color name="color_gray">#EEEEEE</color>
+    <color name="dark_gray">#606060</color>
+    <color name="dark_gray_trans">#5B606060</color>
+    <color name="otp_bg_color">#F3F3F3</color>
+
+    <color name="txt_gray">#8E8E8E</color>
+</resources>

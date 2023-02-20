@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <com.pollvote.utils.customView.CustomButtonRobotoRegular
+        android:layout_marginTop="20sp"
+        android:id="@+id/btn_go_vote"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_button"
+        android:text="@string/go_vote"
+        android:textAllCaps="true"
+        android:textColor="@color/color_white" />
+
+
+    <com.pollvote.utils.customView.CustomTVRobbotLite
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:includeFontPadding="false"
+        android:text="@string/voting_now_open"
+        android:textColor="@color/color_black"
+        android:textSize="16sp" />
+</LinearLayout>

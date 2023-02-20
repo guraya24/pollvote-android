@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/bg"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <ImageView
+        tools:ignore="ContentDescription"
+        android:id="@+id/img_tyre"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/login_ok" />
+
+    <com.pollvote.utils.customView.CustomTVRobbotBold
+        android:id="@+id/txt_minty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_tyre"
+        android:layout_marginTop="10dp"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.10"
+        android:text="@string/poll_vote"
+        android:textColor="@color/color_black"
+        android:textSize="25sp" />
+
+    <com.pollvote.utils.customView.CustomTVRobbotLite
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_minty"
+        android:includeFontPadding="false"
+        android:text="@string/sign_in_continue"
+        android:textColor="@color/color_black"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="bottom"
+                app:hintTextAppearance="@style/TextLabel">
+
+
+                <com.pollvote.utils.customView.CustomETVPoppinsRegular
+                    android:id="@+id/et_user_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/dark_gray"
+                    android:hint="@string/mobile_number"
+                    android:inputType="phone"
+                    android:maxLength="14"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <ImageView
+                tools:ignore="ContentDescription"
+                android:id="@+id/img_mail_id_correct"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="34dp"
+                android:src="@drawable/ic_baseline_done_24"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="bottom"
+                app:hintTextAppearance="@style/TextLabel"
+                app:passwordToggleDrawable="@drawable/password_toggle"
+                app:passwordToggleEnabled="true">
+
+                <com.pollvote.utils.customView.CustomETVPoppinsRegular
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:paddingEnd="40dp"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+        <com.pollvote.utils.customView.CustomTVRobbotRegular
+            android:id="@+id/txt_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/forgot_password_"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.pollvote.utils.customView.CustomButtonRobotoRegular
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_button"
+            android:text="@string/signin"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                tools:ignore="ContentDescription"
+                android:id="@+id/img_remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/untick_remeber" />
+
+            <com.pollvote.utils.customView.CustomTVRobbotRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/remember_me"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

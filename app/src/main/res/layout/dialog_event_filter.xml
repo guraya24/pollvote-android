@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_corner_white"
+    android:orientation="vertical"
+    android:paddingBottom="30dp"
+    android:paddingStart="20sp"
+    android:paddingEnd="20sp"
+    android:paddingTop="30dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            tools:ignore="ContentDescription"
+            android:id="@+id/img_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/cross" />
+
+        <com.pollvote.utils.customView.CustomTVRobbotBold
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/filter_by"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_poll"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_button_gray"
+        android:text="@string/poll"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_marginBottom="5dp"
+        android:id="@+id/btn_vote"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_button_gray"
+        android:text="@string/vote"
+        android:textAllCaps="false" />
+</LinearLayout>

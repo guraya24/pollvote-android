@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".6"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="20sp">
+
+        <com.pollvote.utils.customView.CustomTVRobbotRegular
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/poll_vote"
+            android:textColor="@color/color_black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:src="@mipmap/bg_login"
+            android:contentDescription="@string/todo">
+
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight=".4"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.pollvote.utils.customView.CustomTVRobbotRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_to_the_fastest_way_to"
+            android:textColor="@color/color_black"
+            android:textSize="17sp" />
+
+        <com.pollvote.utils.customView.CustomTVRobbotBold
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/just_vote"
+            android:textColor="@color/color_black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.pollvote.utils.customView.CustomButtonRobotoRegular
+            android:id="@+id/btn_sign"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/bg_button"
+            android:text="@string/setup"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="18sp" />
+
+        <com.pollvote.utils.customView.CustomButtonRobotoRegular
+            android:id="@+id/btn_login"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/bg_button_gray"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

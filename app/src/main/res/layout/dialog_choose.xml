@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_upload_license"
+    style="@style/MaterialCardViewStyleAccount"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+
+            <ImageView
+                tools:ignore="ContentDescription"
+                android:id="@+id/img_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/cross" />
+
+            <com.pollvote.utils.customView.CustomTVRobotoMedium
+                android:id="@+id/title_start_ride"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:enabled="true"
+                android:gravity="center"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="5dp"
+                android:text="@string/upload_by"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <com.pollvote.utils.customView.CustomButtonRobotoRegular
+            android:id="@+id/btn_camera"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_button"
+            android:text="@string/camera"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="16sp" />
+
+        <com.pollvote.utils.customView.CustomButtonRobotoRegular
+            android:id="@+id/btn_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_button"
+            android:text="@string/gallery"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <com.pollvote.utils.customView.CustomTVRobbotRegular
+
+        android:layout_marginTop="20sp"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/enter_your_voter_id"
+        android:textColor="@color/color_black"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        android:orientation="vertical">
+
+        <com.pollvote.utils.customView.CustomETVPoppinsRegular
+            android:id="@+id/et_voter_id"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/enter_your_id"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/et_voter_id"
+            android:background="@color/dark_gray" />
+
+        <ImageView
+            android:id="@+id/img_mail_id_correct"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <com.pollvote.utils.customView.CustomButtonRobotoRegular
+        android:id="@+id/btn_confirm_vote"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_button"
+        android:text="@string/confirm_vote"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textSize="16sp" />
+
+</LinearLayout>

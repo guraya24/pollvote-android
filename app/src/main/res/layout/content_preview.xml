@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layPreview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:animateLayoutChanges="true"
+    android:background="#9F000000"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="10dp"
+    android:visibility="gone">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:animateLayoutChanges="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                tools:ignore="ContentDescription"
+                android:visibility="invisible"
+                android:id="@+id/iv_preview_error"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_not_found" />
+
+            <ImageView
+                tools:ignore="ContentDescription"
+                android:id="@+id/iv_preview_imag"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp" />
+
+            <com.pollvote.utils.customView.CustomTVRobotoMedium
+                android:id="@+id/tv_error_message"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_preview_error"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingBottom="40dp"
+                android:text="@string/imag_not_found"
+                android:textColor="#171717"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        tools:ignore="ContentDescription"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:id="@+id/iv_cross_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/card"
+        android:layout_alignEnd="@+id/card"
+        android:elevation="10dp"
+        android:src="@drawable/ic_cross_white" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="30dp"
+        android:elevation="10dp"
+        android:layout_centerInParent="true"
+        android:layout_height="30dp"/>
+
+</RelativeLayout>

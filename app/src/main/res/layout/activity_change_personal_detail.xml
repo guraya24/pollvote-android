@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:padding="15dp"
+            android:src="@drawable/back_img"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+
+    <com.pollvote.utils.customView.CustomTVRobbotBold
+
+
+        android:id="@+id/txt_pass"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_action_bar"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+
+        android:includeFontPadding="false"
+        android:text="@string/change_personal_detail"
+        android:textColor="@color/color_black"
+        android:textSize="25sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nv_middle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_continue"
+        android:layout_below="@+id/txt_pass"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="bottom"
+                    app:hintTextAppearance="@style/TextLabel">
+
+                    <com.pollvote.utils.customView.CustomETVPoppinsRegular
+                        android:id="@+id/et_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/user_name"
+                        android:singleLine="true"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+            <!--Address-->
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="bottom"
+                    app:hintTextAppearance="@style/TextLabel">
+
+                    <com.pollvote.utils.customView.CustomETVPoppinsRegular
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+            <!--Town-->
+            <RelativeLayout
+                android:id="@+id/rl_last"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="bottom"
+                    app:hintTextAppearance="@style/TextLabel">
+
+                    <com.pollvote.utils.customView.CustomETVPoppinsRegular
+                        android:id="@+id/et_vill_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/village_city"
+                        android:singleLine="true"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+            <!--Province Spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="20sp">
+
+                    <com.pollvote.utils.customView.CustomTvPoppinsRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_province"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="16sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_province"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_spinner_bg"
+                    android:gravity="center_vertical"
+                    android:padding="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/dark_gray"
+                    tools:ignore="PxUsage" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="bottom"
+                    app:hintTextAppearance="@style/TextLabel">
+
+                    <com.pollvote.utils.customView.CustomETVPoppinsRegular
+                        android:id="@+id/et_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/state"
+                        android:singleLine="true"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+            <!--county Spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20sp">
+
+                    <com.pollvote.utils.customView.CustomTvPoppinsRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_county"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="16sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_county"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_spinner_bg"
+                    android:gravity="center_vertical"
+                    android:padding="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/dark_gray"
+                    tools:ignore="PxUsage" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="bottom"
+                    app:hintTextAppearance="@style/TextLabel">
+
+                    <com.pollvote.utils.customView.CustomETVPoppinsRegular
+                        android:id="@+id/et_district"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/district"
+                        android:singleLine="true"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+            <!--Zip -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="bottom"
+                    app:hintTextAppearance="@style/TextLabel">
+
+                    <com.pollvote.utils.customView.CustomETVPoppinsRegular
+                        android:id="@+id/et_zip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/zipcode"
+                        android:maxLength="6"
+                        android:singleLine="true"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="bottom"
+                    app:hintTextAppearance="@style/TextLabel"
+                    app:passwordToggleEnabled="true">
+
+                    <com.pollvote.utils.customView.CustomETVPoppinsRegular
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:singleLine="true"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="bottom"
+                    app:hintTextAppearance="@style/TextLabel"
+                    app:passwordToggleEnabled="true">
+
+                    <com.pollvote.utils.customView.CustomETVPoppinsRegular
+                        android:id="@+id/et_re_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/confirm_password"
+                        android:singleLine="true"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+            <!--DOB-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="bottom"
+                    app:hintTextAppearance="@style/TextLabel">
+
+                    <com.pollvote.utils.customView.CustomETVPoppinsRegular
+                        android:id="@+id/et_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/dob"
+                        android:singleLine="true"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+            <!--Gender Spinner-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20sp">
+
+                    <com.pollvote.utils.customView.CustomTvPoppinsRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_gender"
+                        android:textColor="@color/txt_gray"
+                        android:textSize="16sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sp_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_spinner_bg"
+                    android:padding="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/dark_gray"
+                    tools:ignore="PxUsage" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--  <androidx.core.widget.NestedScrollView
+          android:id="@+id/nv_middle"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_above="@+id/btn_continue"
+          android:layout_below="@+id/rl_action_bar"
+          android:fillViewport="true">
+
+          <LinearLayout
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginStart="30dp"
+              android:layout_marginEnd="30dp"
+              android:orientation="vertical">
+
+
+              <com.pollvote.Utils.customView.CustomTVRobbotBold
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/img_tyre"
+
+                  android:includeFontPadding="false"
+                  android:text="Change Personal Detail"
+                  android:textColor="@color/color_black"
+                  android:textSize="25sp" />
+
+              <LinearLayout
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="20dp"
+
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_first_name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="User Name"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:visibility="gone">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_last_name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@android:color/transparent"
+                          android:hint="Last Name"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+                  <view
+                      android:layout_width="match_parent"
+                      android:layout_height="2px"
+
+                      android:background="@color/dark_gray" />
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_house_number"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="Address"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:id="@+id/rl_last"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_vill_city"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="City/Town"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:visibility="gone"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_district"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="District"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_state"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="Province"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_dob"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="D.O.B."
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+
+              </LinearLayout>
+
+
+          </LinearLayout>
+      </androidx.core.widget.NestedScrollView>-->
+
+    <!--  <androidx.core.widget.NestedScrollView
+          android:id="@+id/nv_middle"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_above="@+id/btn_continue"
+          android:layout_below="@+id/rl_action_bar"
+          android:fillViewport="true">
+
+          <LinearLayout
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginStart="30dp"
+              android:layout_marginEnd="30dp"
+              android:orientation="vertical">
+
+
+              <com.pollvote.Utils.customView.CustomTVRobbotBold
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/img_tyre"
+
+                  android:includeFontPadding="false"
+                  android:text="Change Personal Detail"
+                  android:textColor="@color/color_black"
+                  android:textSize="25sp" />
+
+              <LinearLayout
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="20dp"
+
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_first_name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="User Name"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:visibility="gone">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_last_name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@android:color/transparent"
+                          android:hint="Last Name"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+                  <view
+                      android:layout_width="match_parent"
+                      android:layout_height="2px"
+
+                      android:background="@color/dark_gray" />
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_house_number"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="Address"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:id="@+id/rl_last"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_vill_city"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="City/Town"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:visibility="gone"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_district"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="District"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_state"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="Province"
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                  <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:gravity="bottom"
+                      app:hintTextAppearance="@style/TextLabel">
+
+                      <com.pollvote.Utils.customView.CustomETVPoppinsRegular
+                          android:id="@+id/et_dob"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="D.O.B."
+                          android:singleLine="true"
+                          android:textSize="16sp" />
+                  </com.google.android.material.textfield.TextInputLayout>
+
+
+              </LinearLayout>
+
+
+          </LinearLayout>
+      </androidx.core.widget.NestedScrollView>-->
+
+    <com.pollvote.utils.customView.CustomButtonRobotoRegular
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/bg_button"
+        android:text="@string/continue_btn"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

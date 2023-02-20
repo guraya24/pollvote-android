@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "886462073880",
+    "firebase_url": "https://wc-pollvote.firebaseio.com",
+    "project_id": "wc-pollvote",
+    "storage_bucket": "wc-pollvote.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886462073880:android:6b104ff9f1cdb80157876d",
+        "android_client_info": {
+          "package_name": "com.pollvote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886462073880-shp9c0ap6r748tffl9r5l0v4iim92fnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB8ePVRneWF43-hv6sKZKRcMBiB21vvuM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886462073880-shp9c0ap6r748tffl9r5l0v4iim92fnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
